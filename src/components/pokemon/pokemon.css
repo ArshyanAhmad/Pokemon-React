@@ -1,0 +1,30 @@
+.pokemon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pokemon .name {
+    font-size: 22px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.pokemon .img-wrapper {
+    padding: 20px;
+    width: 300px;
+    transition: all .3s ease;
+}
+
+.pokemon .img-wrapper:hover {
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.411);
+
+}
+
+.pokemon .img-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

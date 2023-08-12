@@ -1,3 +1,8 @@
 .pokemon-list-wrapper {
-    margin: 5rem auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

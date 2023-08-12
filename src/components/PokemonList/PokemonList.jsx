@@ -9,7 +9,6 @@ function PokemonList() {
     const [PokemonList, setPokemonList] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
 
-
     async function downloadPokemons() {
         const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
         const PokemonResults = response.data.results;
@@ -36,7 +35,6 @@ function PokemonList() {
 
     return (
         <div className='pokemon-list-wrapper'>
-            <h2> List of Pokemons</h2>
             {(isLoading) ? ' Loading...' :
                 PokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
             }
