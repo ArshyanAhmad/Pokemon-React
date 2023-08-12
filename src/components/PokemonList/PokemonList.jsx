@@ -10,7 +10,7 @@ function PokemonList() {
     const [isLoading, setIsLoading] = useState(true)
 
     async function downloadPokemons() {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon`);
         const PokemonResults = response.data.results;
         const PokemonResultPromise = PokemonResults.map((Pokemon) => axios.get(Pokemon.url))
         const PokemonData = await axios.all(PokemonResultPromise)
@@ -34,11 +34,13 @@ function PokemonList() {
     }, [])
 
     return (
-        <div className='pokemon-list-wrapper'>
-            {(isLoading) ? ' Loading...' :
-                PokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
-            }
-        </div>
+        <>
+            <div className='pokemon-list-wrapper'>
+                {(isLoading) ? ' Loading...' :
+                    PokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
+                }
+            </div>
+        </>
     )
 }
 
