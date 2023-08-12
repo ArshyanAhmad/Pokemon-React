@@ -1,0 +1,16 @@
+.search-wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#pokemon-name-search {
+    width: 100%;
+    height: 5px;
+    padding: 20px;
+}
+
+#pokemon-name-search::placeholder {
+    font-size: 17px;
+    font-family: sans-serif;
+    color: black;
+}
